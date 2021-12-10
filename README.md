@@ -49,6 +49,5 @@ codes couvert/non couverts par les tests.
 - Gautier MARTIN
 - Timothée JUILLET
 - Florian PUSTEL
--Krysto
 ```
 
