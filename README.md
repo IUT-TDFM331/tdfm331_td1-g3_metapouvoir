@@ -46,8 +46,8 @@ codes couvert/non couverts par les tests.
 
 ## Contributors 
 ```java
-- Gautier MARTIN
-- Timothée JUILLET
-- Florian PUSTEL
+Gautier MARTIN
+Timothée JUILLET
+Florian PUSTEL
 ```
 
