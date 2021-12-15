@@ -2,6 +2,7 @@ package fr.iut.tdfm331.td1.service;
 
 import fr.iut.tdfm331.td1.model.Employee;
 import fr.iut.tdfm331.td1.model.Meeting;
+
 import org.hamcrest.collection.IsIterableContainingInAnyOrder;
 import org.junit.Assert;
 import org.junit.Before;
@@ -79,5 +80,27 @@ public class ListApiServiceTest {
         Meeting meetingToRemove = service.getListMeetings().get(0);
         service.getListMeetings().remove(meetingToRemove);
         Assert.assertFalse(service.getListMeetings().contains(meetingToRemove));
+    }
+
+    @Test
+    public void removeMeeting(){
+        List<Employee> listEmployees = Arrays.asList(new Employee("Baptiste", "baptiste@lamzone.com", 4),
+                new Employee("Fanny", "fanny@lamzone.com", 10),
+                new Employee("Vincent", "vincent@lamzone.com", 22));
+
+
+
+        Meeting meetingSupp = new Meeting("Réunion d'avancement",
+                "Planck",
+                "12/11/20",
+                "15:30",
+                "16:00",
+                "Revues des dernières actions",
+                listEmployees);
+        service.addMeeting(meetingSupp);
+        Assert.assertTrue(service.getListMeetings().contains(meetingSupp));
+        service.removeMeeting(meetingSupp);
+        Assert.assertFalse(service.getListMeetings().contains(meetingSupp));
+
     }
 }
